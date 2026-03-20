@@ -15,7 +15,7 @@ const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
 app.use(cors({
-  origin: /^http:\/\/localhost:\d+$/,
+  origin: [/^http:\/\/localhost:\d+$/, /^https:\/\/.*\.vercel\.app$/],
   credentials: true
 }));
 app.use(express.json());
