@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const api = axios.create({
-    baseURL: 'https://auth-api-xyz.onrender.com',
+    baseURL: 'https://auth-api-backend-t7hi.onrender.com',
   });
 
   api.interceptors.request.use(config => {
